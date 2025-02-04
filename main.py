@@ -1,6 +1,13 @@
 from question_model import Question
+from data import question_data
 
-new_q = Question("citypop", "is nice")
+question_bank = []
 
-print(new_q.text)
-print(new_q.answer)
+for question in question_data:
+    question_text = question["text"]
+    question_answer = question["answer"]
+    new_question = Question(question_text, question_answer)
+    question_bank.append(new_question)
+
+
+    
